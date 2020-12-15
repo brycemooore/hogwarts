@@ -3,6 +3,11 @@
   text-align: center;
 }
 
+.hidden{
+  background-color: red;
+  display: none !important;
+}
+
 .TwirlyPig {
   transition: all 3s ease-in-out;
   display: inline;
@@ -83,7 +88,10 @@ ul {
   outline: #3B0B0B dotted thick;
   transition: 0.75s;
   opacity: 1;
+  align-items: center;
 }
+
+
 
 .minBackgroundSneak {
   position: absolute;
@@ -117,6 +125,8 @@ ul {
   height: 500px;
 }
 
+
+
 .pigTile:hover {
   transform: scale(1.05);
 }
@@ -138,3 +148,5 @@ ul {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+
+
