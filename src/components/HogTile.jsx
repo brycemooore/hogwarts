@@ -30,20 +30,25 @@ export default class HogTile extends Component{
         this.setState({hogShowing: !currentState});
     }
 
+    componentDidMount(){
+        
+    }
+
     render(){
 
         return(
-            <div onClick={this.handleDataShowingChange} className={`ui eight wide column pigTile ${this.showHog()}`}>
-                <h3>{this.props.data.name}</h3>
-                <img className="minPigTile"alt="" src={require("../hog-imgs/" + this.props.data.name.toLowerCase().replace(/ /g, "_") + ".jpg")}/>
+            <div onClick={this.handleDataShowingChange} className={`ui card eight wide column pigTile ${this.showHog()}`}>
+                <h3 className="header ">{this.props.data.name}</h3>
+                <img className="ui medium circular image"alt="" src={require("../hog-imgs/" + this.props.data.name.toLowerCase().replace(/ /g, "_") + ".jpg")}/>
                 <div className={`${this.showData()}`}>
                     <p className="hoggyText">Specialty: {this.props.data.specialty}</p>
                     <p className="hoggyText">Weight: {this.props.data.weight}</p>
                     <p className="hoggyText">Greased: {(this.props.data.greased).toString()}</p>
                     <p className="achievementText">Highest Medal: {this.props.data['highest medal achieved']}</p>
                 </div>
+                <br/>
                 <div>
-                    <button onClick={this.handleHogShowingChange} >Fly Away</button>
+                    <button className="ui pink basic button" onClick={this.handleHogShowingChange} >Fly Away</button>
                 </div>
             </div>
         )
