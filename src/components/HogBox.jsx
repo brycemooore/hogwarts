@@ -16,6 +16,7 @@ export default class HogBox extends Component{
 
     filteredHogs(){
         return (this.state.greased ? this.props.hogs.filter(hog => hog.greased === true) : this.props.hogs)
+        //return (this.state.greased && this.props.hogs.filter(hog =>hog.greased === true))
     }
 
     sortHogs(hogs){
